@@ -2,11 +2,11 @@ import time
 import difflib
 
 from selenium import webdriver
-import chromedriver_autoinstaller
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 
-chromedriver_autoinstaller.install()
-browser = webdriver.Chrome(executable_path=r"C:\Users\munte\Desktop\pythonProject\chromedriver.exe")
+service = Service(executable_path=r"C:\Users\munte\Desktop\pythonProject\chromedriver.exe")
+browser = webdriver.Chrome(service=service)
 browser.get("https://automationintesting.online/")
 # time.sleep(1)
 
